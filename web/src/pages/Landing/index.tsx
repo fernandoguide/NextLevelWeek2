@@ -1,4 +1,6 @@
-import React  from "react";
+import React from "react";
+
+import { Link } from "react-router-dom";
 
 import logoImg from '../../assets/images/logo.svg';
 import landingImg from '../../assets/images/landing.svg';
@@ -11,34 +13,34 @@ import './styles.css';
 
 function Landing() {
     return (
-    <div id="page-landing">
-        <div id="page-landing-content" className="container">
-            <div className="logo-contanier">
-                <img src={logoImg} alt="Proffy"/>
-                <h2>Sua plataforma de estudos online.</h2>
-            </div>
-            <img 
-            src={landingImg} 
-            alt="Plataforma de estudos" 
-            className="hero-image"
-            />
+        <div id="page-landing">
+            <div id="page-landing-content" className="container">
+                <div className="logo-contanier">
+                    <img src={logoImg} alt="Proffy" />
+                    <h2>Sua plataforma de estudos online.</h2>
+                </div>
+                <img
+                    src={landingImg}
+                    alt="Plataforma de estudos"
+                    className="hero-image"
+                />
 
-            <div className="buttons-container">
-                <a href="" className="study" >
-                    <img src={studyIcon}  alt="Estudar"/>
+                <div className="buttons-container">
+                    <Link to="/study" className="study" >
+                        <img src={studyIcon} alt="Estudar" />
                     Estudar
-                </a>
+                </Link>
 
-                <a href="" className="give-classes" >
-                    <img src={giveClassesIcon}  alt="Dar Aula"/>
+                    <Link to="/give-classes" className="give-classes" >
+                        <img src={giveClassesIcon} alt="Dar Aula" />
                     Dar Aulas
-                </a>
+                </Link>
+                </div>
+                <span className="total-connections">
+                    Total de 200 conexoes ja realizadas <img src={purpleHeartIcon} alt="Coracao roxo" />
+                </span>
             </div>
-            <span className="total-connections">
-                Total de 200 conexoes ja realizadas <img src={purpleHeartIcon} alt="Coracao roxo"/>
-            </span>
         </div>
-    </div>
     )
 }
 
